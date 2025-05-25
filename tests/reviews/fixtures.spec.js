@@ -16,3 +16,14 @@ await page3.goto('https://www.bing.com/');
 
 });
 
+test('Browserfixtures',async({browser})=>{
+let context1 = await browser.newContext();
+let context2 = await browser.newContext();
+
+let page1 = await context1.newPage();
+let page2 = await context2.newPage();
+
+await page1.goto("https://www.perplexity.ai/");
+await page2.goto('https://www.bing.com/');
+
+});
